@@ -1,0 +1,53 @@
+seed: 42
+
+dataset:
+  name: MWCD v1
+  doi: 10.17632/x863v66fv3.1
+  license: CC BY 4.0
+  raw_dir: data/raw
+  processed_dir: data/processed
+  dataset_dir: data/processed/dataset
+  splits_csv: data/processed/splits.csv
+  audit_csv: results/data_audit.csv
+  audit_plot: results/class_distribution.png
+  realworld_dir: data/realworld
+  valid_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+
+classes:
+  - battery
+  - cardboard
+  - glass
+  - metal
+  - organic
+  - paper
+  - plastic
+  - textile
+  - trash
+
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+preprocess:
+  image_size: 224
+  keep_aspect_ratio: true
+  color_mode: RGB
+  clahe: false
+  clahe_clip_limit: 2.0
+  clahe_tile_grid: 8
+  padding_color: 0
+  jpeg_quality: 95
+  resize_interpolation: INTER_AREA
+
+dedup:
+  enabled: true
+  method: perceptual_hash
+  hash_size: 8
+  hamming_threshold: 5
+  hash_blocks: 8
+  drop_conflicting_labels: true
+  removed_csv: data/processed/dedup_removed.csv
