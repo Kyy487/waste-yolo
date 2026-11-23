@@ -1,0 +1,35 @@
+# Dataset, processed artifacts, and model weights
+data/*
+!data/.gitkeep
+!data/processed/
+data/processed/*
+!data/processed/.gitkeep
+!data/realworld/
+data/realworld/*
+!data/realworld/.gitkeep
+models/*
+!models/.gitkeep
+*.pt
+*.onnx
+
+# Python and environments
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local logs and secrets
+runs/
+wandb/
+*.log
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
