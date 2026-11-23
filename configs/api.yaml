@@ -1,0 +1,26 @@
+api:
+  version: v1
+  prefix: /v1
+  host: 127.0.0.1
+  port: 8000
+
+model:
+  path: models/model.onnx
+  card: models/model_card.json
+  format: onnx
+  input_size: 224
+
+inference:
+  top_k_default: 3
+  top_k_min: 1
+  top_k_max: 9
+  batch_limit: 16
+  max_upload_mb: 5
+  allowed_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+
+logging:
+  requests: true
+  store_images: false
