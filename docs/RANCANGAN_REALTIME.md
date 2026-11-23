@@ -1,6 +1,6 @@
 # Rancangan Klasifikasi Sampah Real-Time via Kamera
 
-Status: usulan, menunggu persetujuan Project Lead  
+Status: API dan demo sudah diimplementasikan; menunggu `models/model.onnx` dan persetujuan Project Lead  
 Tanggal: 2026-11-23  
 Keputusan mode: **klasifikasi real-time**, bukan deteksi dengan bounding box.
 
@@ -8,7 +8,7 @@ Keputusan mode: **klasifikasi real-time**, bukan deteksi dengan bounding box.
 
 Dataset MWCD hanya memiliki label per gambar, tanpa koordinat bounding box. Sesuai `AGENTS.md`, project ini adalah klasifikasi 9 kelas, bukan object detection. Pengguna menginginkan demo dengan kamera real-time; oleh karena itu demo akan menampilkan **satu label kelas per frame**, bukan beberapa kotak objek.
 
-Saat dokumen ini dibuat, pipeline data dan modul training sudah tersedia. Evaluasi final, ekspor ONNX, API FastAPI, dan demo Streamlit belum diimplementasikan. Kamera tidak bisa langsung memanggil model sampai API dan artefak ONNX siap.
+Pipeline data, modul training, API FastAPI, dan demo Streamlit sudah tersedia di sisi kode. Evaluasi final dan ekspor ONNX belum dilakukan, sehingga `models/model.onnx` belum ada. Kamera sudah bisa mengirim frame ke API, tetapi prediksi nyata baru muncul setelah artefak ONNX siap.
 
 Sumber kebenaran kontrak: `AGENTS.md` bagian 8 dan 9.
 
@@ -89,21 +89,21 @@ Perilaku penting:
 
 ### 5.3 Klien kamera di Streamlit
 
-File `app/streamlit_app.py` akan diisi dengan perilaku:
+File `app/streamlit_app.py` sudah diisi dengan perilaku:
 
-1. Tombol **Start** membuka kamera lewat `cv2.VideoCapture(camera_index)`.
-2. Loop mengambil satu frame, lalu langsung meng-encode ke JPEG di memory dengan `cv2.imencode`.
+1. Tombol **Start kamera** membuka kamera lewat `cv2.VideoCapture(camera_index)` dan menyimpannya di `st.session_state`.
+2. Setiap rerun Streamlit mengambil **satu frame**, meng-encode ke JPEG di memory dengan `cv2.imencode`, lalu mengirimnya ke API.
 3. Frame dikirim memakai satu `requests.Session` yang dipakai ulang.
-4. Hanya satu request aktif pada satu waktu; frame baru dilewati bila request sebelumnya belum selesai.
-5. Respons API diparse, lalu label, confidence, dan `top_k` digambar sebagai overlay.
-6. Tombol **Stop** melepaskan kamera dan menutup session.
+4. Hanya satu request aktif per rerun; setelah respons diterima, halaman di-rerun dengan `st.rerun()`. Tidak ada loop `while` yang memblokir UI.
+5. Respons API diparse, lalu label, confidence, dan FPS digambar sebagai overlay; `top_k` ditampilkan bila `show_top_k: true`.
+6. Tombol **Stop kamera** melepaskan kamera dan menghapus state smoothing.
 7. Frame tidak ditulis ke disk.
 
 Klien **tidak** melakukan resize 224×224. Praproses tetap menjadi tanggung jawab API agar tidak terjadi normalisasi atau resize ganda.
 
 ### 5.4 Smoothing di sisi demo
 
-Agar label tidak berkedip, demo boleh melakukan majority vote pada `predicted_class` dari `smoothing_window` prediksi terakhir. Confidence yang ditampilkan adalah rata-rata confidence dari prediksi kelas terpilih. Smoothing hanya berada di demo dan tidak mengubah kontrak API.
+Agar label tidak berkedip, demo melakukan majority vote pada `predicted_class` dari `smoothing_window` prediksi terakhir. Confidence yang ditampilkan adalah confidence dari prediksi terbaru, bukan rata-rata. Smoothing hanya berada di demo dan tidak mengubah kontrak API.
 
 Nilai default yang diusulkan: `smoothing_window: 5`.
 
@@ -175,6 +175,8 @@ Pesan error tidak boleh membocorkan path server atau stack trace.
 
 ## 9. Tahap implementasi
 
+Status kode: Tahap 2 (API) dan Tahap 3 (demo kamera) sudah diimplementasikan dan lolos test. Tahap 1 (model final + ONNX) dan Tahap 4 (video demo) belum selesai.
+
 ### Tahap 1 — Finalisasi model
 
 Prasyarat sebelum API:
@@ -210,6 +212,8 @@ Prasyarat sebelum API:
 **Acceptance:** perintah di dokumentasi berhasil dijalankan dari repository bersih sesuai README.
 
 ## 10. Rencana pengujian
+
+Test otomatis sudah ditulis dan dijalankan: `pytest -q` menghasilkan **46 passed**. Test kontrak API memakai engine tiruan karena `models/model.onnx` belum ada; checklist manual kamera tetap harus dijalankan setelah model tersedia.
 
 ### Test kontrak API
 

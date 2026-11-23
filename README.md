@@ -6,7 +6,7 @@ Panduan menjalankan: [`docs/PANDUAN_MENJALANKAN.md`](docs/PANDUAN_MENJALANKAN.md
 
 ## Status
 
-Tahap fondasi, pipeline data, dan modul training selesai. Dataset mentah di `data/raw/` (35.168 gambar) sudah melalui audit, deduplikasi perceptual hash, dan split stratified 70/15/15 seed 42 menjadi 30.644 gambar. Hasil olahan ada di `data/processed/` (tidak di-commit), bersama `splits.csv` dan `dedup_removed.csv`; ringkasan audit ada di `results/data_audit.csv` dan `results/class_distribution.png`. Smoke test training 1 epoch pada 0,5% data berhasil dijalankan di CPU (1,31 menit; metrik smoke bukan hasil evaluasi). Baseline penuh belum dijalankan; model final, metrik, dan API masih belum ada, sehingga semua nilai evaluasi tetap `null`.
+Tahap fondasi, pipeline data, modul training, API FastAPI v1, dan demo kamera Streamlit selesai di sisi kode. Dataset mentah di `data/raw/` (35.168 gambar) sudah melalui audit, deduplikasi perceptual hash, dan split stratified 70/15/15 seed 42 menjadi 30.644 gambar. Hasil olahan ada di `data/processed/` (tidak di-commit), bersama `splits.csv` dan `dedup_removed.csv`; ringkasan audit ada di `results/data_audit.csv` dan `results/class_distribution.png`. Smoke test training 1 epoch pada 0,5% data berhasil dijalankan di CPU (1,31 menit; metrik smoke bukan hasil evaluasi). Baseline penuh belum dijalankan, sehingga `models/model.onnx` belum ada dan `/v1/predict` akan mengembalikan `503 MODEL_NOT_LOADED` sampai model diekspor. Semua nilai evaluasi tetap `null`. Test repository: **46 passed**.
 
 ## Persyaratan
 
@@ -39,7 +39,14 @@ Baseline E1 memakai konfigurasi `configs/train.yaml` dan memerlukan konfirmasi k
 python -m src.train.train --config configs/train.yaml --root .
 ```
 
-API FastAPI dan demo Streamlit belum bisa dijalankan karena modulnya belum diimplementasikan.
+Menjalankan API dan demo kamera:
+
+```bash
+uvicorn src.api.main:app --reload --port 8000
+streamlit run app/streamlit_app.py
+```
+
+API tetap berjalan tanpa `models/model.onnx`, tetapi `/v1/health` akan melaporkan `model_loaded: false` dan `/v1/predict` mengembalikan `503 MODEL_NOT_LOADED`. Demo kamera membutuhkan API aktif dan model ONNX yang sudah diekspor untuk menampilkan prediksi nyata.
 
 ## Konfigurasi
 
@@ -47,7 +54,7 @@ API FastAPI dan demo Streamlit belum bisa dijalankan karena modulnya belum diimp
 | --- | --- |
 | `configs/data.yaml` | seed, lokasi dataset, 9 kelas, rasio split, praproses, deduplikasi |
 | `configs/train.yaml` | run ID, model, hyperparameter, output training |
-| `configs/api.yaml` | alamat server, lokasi model, batas upload, `top_k` |
+| `configs/api.yaml` | alamat server, lokasi model, batas upload, `top_k`, pengaturan kamera demo |
 
 Semua parameter dibaca dari berkas tersebut, bukan di-hard-code di kode.
 

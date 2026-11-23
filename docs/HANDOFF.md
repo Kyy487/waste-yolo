@@ -14,8 +14,8 @@ Dokumen ini merangkum apa yang sudah selesai dan apa yang harus dilanjutkan oleh
 | Model final | Belum ada | Baseline E1 belum dijalankan penuh |
 | Evaluasi test | Belum ada | Test set terkunci, hanya dipakai sekali |
 | ONNX | Belum ada | `models/model.onnx` belum diekspor |
-| API FastAPI | Placeholder | `src/api/main.py` belum ada |
-| Demo kamera | Placeholder | `app/streamlit_app.py` masih kosong |
+| API FastAPI | Selesai (kode + test) | `src/api/main.py`, `schemas.py`, `inference.py`; butuh `models/model.onnx` untuk prediksi nyata |
+| Demo kamera | Selesai (kode + test) | `app/api_client.py`, `app/streamlit_app.py`; pola satu frame per rerun |
 
 ## Commit yang sudah dibuat
 
@@ -43,12 +43,12 @@ Dokumen ini merangkum apa yang sudah selesai dan apa yang harus dilanjutkan oleh
 
 - [ ] Evaluasi test set **sekali** untuk model terpilih: accuracy, macro-F1, confusion matrix, analisis error.
 - [ ] Isi `results/CHANGELOG.md` dengan hasil dan keterbatasan nyata.
-- [ ] Implementasi API v1: `src/api/main.py`, `src/api/schemas.py`, `src/api/inference.py`.
-- [ ] Tulis `tests/test_api_contract.py` sesuai `AGENTS.md` bagian 11.
-- [ ] Tambahkan `httpx` ke `requirements.txt` untuk `TestClient`.
-- [ ] Implementasi demo kamera: `app/api_client.py`, `app/streamlit_app.py`, bagian `demo:` di `configs/api.yaml`.
-- [ ] Tambahkan `requests` ke `requirements.txt` untuk multipart dari Streamlit ke API.
-- [ ] Rekam video demo 1–2 menit.
+- [x] Implementasi API v1: `src/api/main.py`, `src/api/schemas.py`, `src/api/inference.py`.
+- [x] Tulis `tests/test_api_contract.py` sesuai `AGENTS.md` bagian 11.
+- [x] Tambahkan `httpx` ke `requirements.txt` untuk `TestClient`.
+- [x] Implementasi demo kamera: `app/api_client.py`, `app/streamlit_app.py`, bagian `demo:` di `configs/api.yaml`.
+- [x] Tambahkan `requests` ke `requirements.txt` untuk multipart dari Streamlit ke API.
+- [ ] Rekam video demo 1–2 menit (menunggu model ONNX).
 
 ### B — Data Engineer
 
@@ -89,7 +89,7 @@ uvicorn src.api.main:app --reload --port 8000
 streamlit run app/streamlit_app.py
 ```
 
-Perintah `uvicorn` dan `streamlit` baru bisa dijalankan setelah modul API dan demo diimplementasikan.
+Perintah `uvicorn` dan `streamlit` sudah bisa dijalankan. Prediksi nyata tetap menunggu `models/model.onnx`; tanpa model, API mengembalikan `503 MODEL_NOT_LOADED`.
 
 ## Catatan penting
 

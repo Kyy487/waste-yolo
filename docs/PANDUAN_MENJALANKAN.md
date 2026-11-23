@@ -9,10 +9,10 @@ Panduan ini menjelaskan cara menjalankan bagian yang sudah tersedia di repositor
 | Pipeline data | Selesai | `python -m src.data.prepare_data ...` |
 | Training | Selesai | `python -m src.train.train ...` |
 | Evaluasi/test/ekspor ONNX | Belum diimplementasikan | - |
-| API FastAPI | Belum diimplementasikan | - |
-| Demo Streamlit | Belum diimplementasikan | - |
+| API FastAPI | Selesai (kode + test) | `uvicorn src.api.main:app --reload --port 8000` |
+| Demo Streamlit | Selesai (kode + test) | `streamlit run app/streamlit_app.py` |
 
-`src/eval/evaluate.py` masih kosong, `src/api/main.py` belum ada, dan `app/streamlit_app.py` masih kosong. Jangan menjalankan `uvicorn src.api.main:app` atau `streamlit run app/streamlit_app.py` sampai modul tersebut dibuat.
+`src/eval/evaluate.py` masih kosong. API dan demo sudah bisa dijalankan, tetapi prediksi nyata membutuhkan `models/model.onnx` yang belum diekspor. Tanpa model, `/v1/health` melaporkan `model_loaded: false` dan `/v1/predict` mengembalikan `503 MODEL_NOT_LOADED`.
 
 ## 1. Prasyarat
 
@@ -75,7 +75,7 @@ black --check .
 pytest -q
 ```
 
-Pada lingkungan ini, `pytest -q` menghasilkan **21 passed**. Warning depresasi `pyparsing` dari matplotlib tidak menggagalkan test.
+Pada lingkungan ini, `pytest -q` menghasilkan **46 passed**. Warning depresasi `pyparsing` dari matplotlib dan `anyio` dari Starlette TestClient tidak menggagalkan test.
 
 ## 4. Menjalankan pipeline data
 
@@ -142,7 +142,35 @@ Ikuti pola nama `E{nomor}_{model}_{imgsz}_{catatan}` dan ubah satu variabel per 
 
 File `.pt` dan `.onnx` sudah diabaikan oleh `.gitignore`. Jangan meng-commit bobot model atau dataset.
 
-## 6. Masalah umum
+## 6. Menjalankan API FastAPI
+
+```bash
+uvicorn src.api.main:app --reload --port 8000
+```
+
+Endpoint tersedia di `http://localhost:8000/v1`: `/health`, `/classes`, `/model`, `/predict`, `/predict/batch`. Dokumentasi otomatis ada di `http://localhost:8000/docs`.
+
+API memuat `models/model.onnx` sekali saat startup. Bila file belum ada, layanan tetap hidup tetapi `/v1/predict` dan `/v1/predict/batch` mengembalikan `503 MODEL_NOT_LOADED`. Praproses, validasi upload, dan format error mengikuti [`api_contract.md`](api_contract.md).
+
+Contoh prediksi satu gambar:
+
+```bash
+curl -X POST "http://localhost:8000/v1/predict?top_k=3" -F "file=@contoh.jpg"
+```
+
+## 7. Menjalankan demo kamera real-time
+
+Jalankan API terlebih dahulu, lalu:
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+Demo memakai pola **satu frame per rerun** Streamlit (`st.rerun()`), bukan loop `while` yang memblokir. Tombol **Start kamera** membuka `cv2.VideoCapture`, mengirim frame JPEG in-memory ke `/v1/predict`, menampilkan overlay label/confidence/FPS, lalu me-rerun halaman. Tombol **Stop kamera** melepaskan kamera. Pengaturan kamera ada di bagian `demo:` pada `configs/api.yaml`.
+
+Demo tidak memuat model sendiri dan tidak menyimpan frame ke disk. Prediksi nyata baru muncul setelah `models/model.onnx` tersedia.
+
+## 8. Masalah umum
 
 | Masalah | Penyebab | Solusi |
 | --- | --- | --- |
@@ -152,8 +180,11 @@ File `.pt` dan `.onnx` sudah diabaikan oleh `.gitignore`. Jangan meng-commit bob
 | `run_id already exists in ... experiments.csv` | Run ID sudah tercatat | Gunakan run ID baru atau `--no-record` untuk smoke |
 | Training sangat lambat | CPU-only | Kecilkan `--batch` atau `--fraction`, atau gunakan GPU |
 | `black` mengabaikan notebook | Extra Jupyter tidak terpasang | Aman untuk pipeline Python; notebook bukan sumber logika utama |
+| `/v1/predict` mengembalikan `503 MODEL_NOT_LOADED` | `models/model.onnx` belum ada | Selesaikan training, evaluasi, dan ekspor ONNX terlebih dahulu |
+| Demo menampilkan “API tidak tersedia” | Uvicorn belum berjalan atau port berbeda | Jalankan `uvicorn src.api.main:app --port 8000` dan cek `configs/api.yaml` |
+| Kamera tidak dapat dibuka | `camera_index` salah atau kamera dipakai aplikasi lain | Ubah `demo.camera_index` di `configs/api.yaml` dan tutup aplikasi lain |
 
-## 7. Tahap berikutnya
+## 9. Tahap berikutnya
 
 Setelah baseline dan pemilihan model selesai, tahap berikutnya adalah evaluasi test set yang terkunci, ekspor ONNX, API FastAPI `/v1`, dan demo Streamlit. Test set hanya dipakai sekali untuk evaluasi akhir model terpilih dan tidak boleh dipakai untuk tuning.
 
