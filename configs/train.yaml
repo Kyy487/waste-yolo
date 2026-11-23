@@ -1,0 +1,31 @@
+run:
+  id: E1_yolov8n-cls_224_baseline
+  notes: baseline with default augmentation
+
+model:
+  architecture: yolov8n-cls
+  weights: yolov8n-cls.pt
+
+dataset:
+  config: configs/data.yaml
+  dataset_dir: data/processed/dataset
+
+training:
+  epochs: 50
+  imgsz: 224
+  batch: 32
+  patience: 10
+  seed: 42
+  device: auto
+  fraction: 1.0
+  val: true
+  augmentation: default
+  imbalance: none
+
+output:
+  project: runs/classify
+  name: E1_yolov8n-cls_224_baseline
+  run_dir: results/runs
+  final_weights: models/best.pt
+  experiments_csv: results/experiments.csv
+  plots: true
