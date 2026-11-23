@@ -1,0 +1,18 @@
+# Dataset & Model Weights (Gunakan Google Drive untuk berbagi file ini)
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Hasil log lokal sementara
+runs/
+wandb/
+.DS_Store
