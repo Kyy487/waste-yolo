@@ -3,10 +3,14 @@ api:
   prefix: /v1
   host: 127.0.0.1
   port: 8000
+  allowed_origins:
+    - http://localhost:8501
+    - http://127.0.0.1:8501
 
 model:
   path: models/model.onnx
   card: models/model_card.json
+  classes_source: configs/data.yaml
   format: onnx
   input_size: 224
 
@@ -24,3 +28,11 @@ inference:
 logging:
   requests: true
   store_images: false
+
+demo:
+  camera_index: 0
+  target_fps: 8
+  top_k: 3
+  smoothing_window: 5
+  show_top_k: true
+  request_timeout_s: 2.0
