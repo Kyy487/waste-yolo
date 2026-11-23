@@ -9,6 +9,7 @@ data/realworld/*
 !data/realworld/.gitkeep
 models/*
 !models/.gitkeep
+!models/model_card.json
 *.pt
 *.onnx
 

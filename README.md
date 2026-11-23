@@ -2,7 +2,7 @@
 
 Klasifikasi 9 kelas sampah dari gambar menggunakan YOLO mode classify yang dilatih dengan transfer learning pada Merged Waste Classification Dataset (MWCD). Praproses memakai OpenCV. Proyek ini bukan object detection dan tidak memakai layanan AI pihak ketiga.
 
-Panduan menjalankan: [`docs/PANDUAN_MENJALANKAN.md`](docs/PANDUAN_MENJALANKAN.md). Dokumen rancangan: [`docs/RANCANGAN.md`](docs/RANCANGAN.md). Rancangan kamera real-time: [`docs/RANCANGAN_REALTIME.md`](docs/RANCANGAN_REALTIME.md). Kontrak dan aturan kerja: [`AGENTS.md`](AGENTS.md).
+Panduan menjalankan: [`docs/PANDUAN_MENJALANKAN.md`](docs/PANDUAN_MENJALANKAN.md). Dokumen rancangan: [`docs/RANCANGAN.md`](docs/RANCANGAN.md). Rancangan kamera real-time: [`docs/RANCANGAN_REALTIME.md`](docs/RANCANGAN_REALTIME.md). Kontrak API: [`docs/api_contract.md`](docs/api_contract.md). Handoff tim: [`docs/HANDOFF.md`](docs/HANDOFF.md). Kontrak dan aturan kerja: [`AGENTS.md`](AGENTS.md).
 
 ## Status
 

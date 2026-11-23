@@ -1,0 +1,27 @@
+{
+  "name": "waste-yolo-cls",
+  "version": "1.0.0",
+  "architecture": "yolov8n-cls",
+  "input_size": 224,
+  "classes": [
+    "battery",
+    "cardboard",
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic",
+    "textile",
+    "trash"
+  ],
+  "dataset": "MWCD v1 (DOI 10.17632/x863v66fv3.1)",
+  "seed": 42,
+  "train_run_id": "E1_yolov8n-cls_224_baseline",
+  "commit": "PENDING",
+  "metrics": {
+    "val_macro_f1": null,
+    "test_accuracy": null,
+    "test_macro_f1": null
+  },
+  "known_limitations": []
+}
