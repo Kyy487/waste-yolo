@@ -1,0 +1,188 @@
+filepath,true_class,predicted_class,confidence,true_confidence
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_88_f2c45ea5.jpg,textile,organic,0.999927,6.8e-05
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_45_c85bb177.jpg,textile,trash,0.99964,0.000292
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_402_623416c5.jpg,cardboard,paper,0.999583,0.000342
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_767_e677ac52.jpg,plastic,organic,0.999529,0.000441
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic339_c8ad5d76.jpg,plastic,trash,0.999472,0.000105
+data/processed/dataset/val/cardboard/garbage_12_cardboard_cardboard269_319825bf.jpg,cardboard,paper,0.999097,0.000485
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_126_a654ca7c.jpg,textile,paper,0.998839,0.001157
+data/processed/dataset/val/paper/realwaste_Paper_Paper_404_6528ecb0.jpg,paper,textile,0.997643,0.002131
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_22_b7b3e6d7.jpg,plastic,metal,0.994947,0.003953
+data/processed/dataset/val/paper/gd_10_paper_paper_195_abf6315c.jpg,paper,cardboard,0.994767,0.002499
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_689_3217db49.jpg,plastic,paper,0.994294,0.004485
+data/processed/dataset/val/cardboard/garbage_12_cardboard_cardboard375_9127f079.jpg,cardboard,paper,0.993555,0.005257
+data/processed/dataset/val/organic/garbage_12_biological_biological327_27e64f57.jpg,organic,glass,0.993334,0.005846
+data/processed/dataset/val/trash/gd_10_trash_trash_349_b876f3ab.jpg,trash,cardboard,0.993223,9e-06
+data/processed/dataset/val/glass/gd_10_glass_glass_434_c0b95597.jpg,glass,plastic,0.990074,0.001871
+data/processed/dataset/val/glass/gd_10_glass_glass_679_cbea74b1.jpg,glass,plastic,0.989487,0.010448
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_567_704c2e6f.jpg,plastic,glass,0.988128,0.011872
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_970_33a6acd1.jpg,plastic,metal,0.987124,0.012581
+data/processed/dataset/val/trash/trashnet_trash_trash61_436a7603.jpg,trash,paper,0.986748,0.0
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_332_3b79def3.jpg,plastic,glass,0.98633,0.013354
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_282_eb6218dc.jpg,trash,metal,0.985899,0.001631
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_495_56e4c1ff.jpg,plastic,glass,0.985684,0.013989
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_160_fe303542.jpg,cardboard,plastic,0.982341,0.013704
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_242_ed586bd3.jpg,plastic,metal,0.981367,0.015823
+data/processed/dataset/val/metal/garbage_12_metal_metal504_698976d1.jpg,metal,battery,0.980234,0.01972
+data/processed/dataset/val/paper/realwaste_Paper_Paper_154_71c587df.jpg,paper,cardboard,0.979585,0.020382
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_281_9349e935.jpg,trash,metal,0.978784,0.002156
+data/processed/dataset/val/glass/gd_10_glass_glass_1652_e976e19f.jpg,glass,plastic,0.976737,0.023235
+data/processed/dataset/val/glass/garbage_12_white-glass_white-glass501_8ae375e4.jpg,glass,plastic,0.975666,0.024272
+data/processed/dataset/val/paper/gd_10_paper_paper_789_9a69b474.jpg,paper,cardboard,0.973726,0.025911
+data/processed/dataset/val/paper/gd_10_paper_paper_305_8ef2d25e.jpg,paper,cardboard,0.973614,0.026381
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_631_399dfb18.jpg,cardboard,paper,0.972776,0.027056
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_632_675db58c.jpg,plastic,cardboard,0.9722,0.026705
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_243_e4017da9.jpg,textile,glass,0.970131,0.019784
+data/processed/dataset/val/paper/gd_10_paper_paper_928_f219c31c.jpg,paper,cardboard,0.968724,0.001582
+data/processed/dataset/val/trash/gd_10_trash_trash_262_c14325e6.jpg,trash,paper,0.968639,6e-05
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_37_2fe8acfb.jpg,plastic,paper,0.967956,0.004388
+data/processed/dataset/val/trash/garbage_12_trash_trash106_7e79a585.jpg,trash,glass,0.966157,0.004461
+data/processed/dataset/val/metal/realwaste_Metal_Metal_250_7a707d3e.jpg,metal,plastic,0.964267,0.034053
+data/processed/dataset/val/glass/garbage_12_green-glass_green-glass97_ce129aa6.jpg,glass,metal,0.961963,0.020588
+data/processed/dataset/val/paper/realwaste_Paper_Paper_108_aed5e5e7.jpg,paper,cardboard,0.961521,0.038425
+data/processed/dataset/val/organic/gd_10_biological_biological_431_eede35af.jpg,organic,cardboard,0.960461,0.0
+data/processed/dataset/val/paper/garbage_12_paper_paper361_7997614c.jpg,paper,battery,0.955902,0.044044
+data/processed/dataset/val/glass/gd_10_glass_glass_715_94a360ad.jpg,glass,textile,0.954643,0.043557
+data/processed/dataset/val/trash/gd_10_trash_trash_25_f0fb4829.jpg,trash,textile,0.954505,0.015878
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_255_14ee44bb.jpg,cardboard,paper,0.950879,0.049121
+data/processed/dataset/val/trash/gd_10_trash_trash_395_006e8dc8.jpg,trash,plastic,0.948693,0.002428
+data/processed/dataset/val/trash/gd_10_trash_trash_249_19a8d630.jpg,trash,glass,0.947364,0.017526
+data/processed/dataset/val/metal/gd_10_metal_metal_308_0a89a5a2.jpg,metal,textile,0.945806,0.000482
+data/processed/dataset/val/textile/garbage_12_clothes_clothes3184_82b7824f.jpg,textile,trash,0.945407,0.036837
+data/processed/dataset/val/metal/garbage_12_metal_metal35_8cf8b546.jpg,metal,glass,0.945382,0.025419
+data/processed/dataset/val/metal/realwaste_Metal_Metal_483_b832dd53.jpg,metal,plastic,0.944072,0.055811
+data/processed/dataset/val/trash/gd_10_trash_trash_144_33163f9b.jpg,trash,paper,0.9432,0.011212
+data/processed/dataset/val/paper/gd_10_paper_paper_915_9d1a3aa3.jpg,paper,metal,0.941162,0.022058
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_47_d0ac911d.jpg,textile,trash,0.939012,0.060436
+data/processed/dataset/val/glass/garbage_12_white-glass_white-glass300_ca527f44.jpg,glass,plastic,0.937212,0.062676
+data/processed/dataset/val/organic/gd_10_biological_biological_591_feb389a1.jpg,organic,glass,0.937012,0.0583
+data/processed/dataset/val/paper/gd_10_paper_paper_884_b229377e.jpg,paper,cardboard,0.932983,0.067015
+data/processed/dataset/val/battery/garbage_12_battery_battery845_5c6141a7.jpg,battery,cardboard,0.932845,0.065895
+data/processed/dataset/val/paper/gd_10_paper_paper_460_38eab782.jpg,paper,cardboard,0.931895,0.067251
+data/processed/dataset/val/paper/realwaste_Paper_Paper_122_3c7543cf.jpg,paper,cardboard,0.927753,0.071866
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_103_e5eb7e0b.jpg,textile,organic,0.925975,0.045182
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_245_f93d5af9.jpg,plastic,metal,0.925828,0.073259
+data/processed/dataset/val/paper/realwaste_Paper_Paper_123_d021fe49.jpg,paper,cardboard,0.9217,0.078297
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic365_c378d9e9.jpg,plastic,trash,0.917735,0.021069
+data/processed/dataset/val/glass/realwaste_Glass_Glass_175_95968f42.jpg,glass,metal,0.914798,0.081107
+data/processed/dataset/val/glass/gd_10_glass_glass_594_92dcc402.jpg,glass,plastic,0.907174,0.092806
+data/processed/dataset/val/glass/garbage_12_white-glass_white-glass411_fdf6bfb2.jpg,glass,plastic,0.906721,0.093274
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_85_427cc9f4.jpg,textile,paper,0.903454,0.096533
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic540_c91fe97d.jpg,plastic,trash,0.903325,0.012104
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_105_863ced4c.jpg,textile,paper,0.900635,0.099352
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_87_a3f31021.jpg,textile,paper,0.890106,0.109012
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_226_bbe86a9b.jpg,trash,organic,0.890015,0.10711
+data/processed/dataset/val/trash/gd_10_trash_trash_105_ed07d835.jpg,trash,paper,0.888289,0.001063
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_1269_405f304d.jpg,cardboard,plastic,0.885973,0.008609
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_281_f6d9a956.jpg,plastic,metal,0.884892,0.008189
+data/processed/dataset/val/paper/realwaste_Paper_Paper_126_8bb48a08.jpg,paper,cardboard,0.88303,0.116846
+data/processed/dataset/val/paper/gd_10_paper_paper_309_2fab808e.jpg,paper,textile,0.879122,0.067808
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_469_4011a7c7.jpg,trash,organic,0.877558,0.119823
+data/processed/dataset/val/battery/gd_10_battery_battery_559_1db855c8.jpg,battery,cardboard,0.875609,0.124062
+data/processed/dataset/val/organic/garbage_12_biological_biological347_58cc30c0.jpg,organic,textile,0.871043,0.001356
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_275_306fa751.jpg,trash,metal,0.867148,0.126736
+data/processed/dataset/val/metal/gd_10_metal_metal_888_bc5cdc68.jpg,metal,cardboard,0.860711,0.117191
+data/processed/dataset/val/trash/garbage_12_trash_trash112_a568b619.jpg,trash,textile,0.859663,0.13177
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_125_f771d83f.jpg,cardboard,paper,0.855674,0.107737
+data/processed/dataset/val/paper/gd_10_paper_paper_1096_3949f57e.jpg,paper,metal,0.852346,0.029335
+data/processed/dataset/val/metal/garbage_12_metal_metal488_566fae2c.jpg,metal,glass,0.84989,0.146728
+data/processed/dataset/val/metal/gd_10_metal_metal_356_4985f47c.jpg,metal,trash,0.849264,0.092543
+data/processed/dataset/val/trash/gd_10_trash_trash_308_58a1d181.jpg,trash,plastic,0.845957,2e-06
+data/processed/dataset/val/glass/garbage_12_brown-glass_brown-glass2_3299986d.jpg,glass,textile,0.841337,0.047936
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic347_16ac0992.jpg,plastic,cardboard,0.83087,0.002559
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_219_8ba415aa.jpg,trash,textile,0.818511,0.181473
+data/processed/dataset/val/glass/garbage_12_green-glass_green-glass109_3f13db7f.jpg,glass,plastic,0.816937,0.009588
+data/processed/dataset/val/metal/garbage_12_metal_metal224_108c043c.jpg,metal,glass,0.811891,0.003182
+data/processed/dataset/val/paper/garbage_12_paper_paper629_66f3b97b.jpg,paper,metal,0.810287,0.018897
+data/processed/dataset/val/trash/gd_10_trash_trash_224_8daca6f5.jpg,trash,plastic,0.809374,0.12471
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic493_1c547a14.jpg,plastic,glass,0.804768,0.192227
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_433_982b47a7.jpg,trash,plastic,0.801537,0.002818
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_92_229f24a4.jpg,plastic,metal,0.799519,0.193793
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_155_9bf0fb62.jpg,plastic,glass,0.790065,0.209932
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_77_c323a741.jpg,plastic,textile,0.789151,0.031743
+data/processed/dataset/val/metal/gd_10_metal_metal_432_bc88ca5d.jpg,metal,battery,0.786745,0.213049
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_513_e49abff4.jpg,plastic,glass,0.782558,0.217433
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_111_2d1edbb5.jpg,plastic,trash,0.777891,0.080736
+data/processed/dataset/val/metal/gd_10_metal_metal_545_c0f65c0a.jpg,metal,plastic,0.777172,0.187185
+data/processed/dataset/val/trash/trashnet_trash_trash32_973c62c4.jpg,trash,cardboard,0.776226,0.000269
+data/processed/dataset/val/glass/realwaste_Glass_Glass_47_b2e9f115.jpg,glass,plastic,0.772013,0.1414
+data/processed/dataset/val/metal/gd_10_metal_metal_444_f1ea295a.jpg,metal,paper,0.756474,0.143114
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic257_ea3744d7.jpg,plastic,glass,0.75555,0.244402
+data/processed/dataset/val/paper/gd_10_paper_paper_415_ccb0e18d.jpg,paper,organic,0.750186,0.238566
+data/processed/dataset/val/metal/realwaste_Metal_Metal_31_606dcdc2.jpg,metal,plastic,0.742664,0.2551
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_470_79f27acf.jpg,trash,organic,0.729504,0.269292
+data/processed/dataset/val/trash/gd_10_trash_trash_332_76813a32.jpg,trash,plastic,0.727614,0.032318
+data/processed/dataset/val/battery/garbage_12_battery_battery876_7b09bba9.jpg,battery,glass,0.726762,0.253808
+data/processed/dataset/val/organic/realwaste_Vegetation_Vegetation_281_95bdd5bc.jpg,organic,trash,0.717996,0.281837
+data/processed/dataset/val/trash/garbage_12_trash_trash534_4a7006b4.jpg,trash,glass,0.716066,0.113136
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_912_88e396d5.jpg,plastic,cardboard,0.709497,0.25859
+data/processed/dataset/val/trash/gd_10_trash_trash_354_4d961077.jpg,trash,paper,0.708479,0.266713
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic771_58958a2b.jpg,plastic,glass,0.697221,0.166539
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_918_5aa7714c.jpg,plastic,glass,0.688653,0.311229
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_432_5add6ee4.jpg,cardboard,textile,0.685711,0.007521
+data/processed/dataset/val/trash/trashnet_trash_trash91_37e9fb0b.jpg,trash,paper,0.683364,0.053273
+data/processed/dataset/val/paper/realwaste_Paper_Paper_120_d4de785d.jpg,paper,plastic,0.680845,0.292649
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_169_678f1c2b.jpg,trash,organic,0.679369,0.319678
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_756_a5f26ad8.jpg,plastic,organic,0.676174,0.286772
+data/processed/dataset/val/metal/realwaste_Metal_Metal_251_59b47b17.jpg,metal,trash,0.676127,0.086368
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_42_2fc97b49.jpg,trash,plastic,0.675747,0.201362
+data/processed/dataset/val/trash/trashnet_trash_trash47_795989d7.jpg,trash,paper,0.672109,0.327578
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic492_07e902cc.jpg,plastic,paper,0.670857,0.034437
+data/processed/dataset/val/metal/garbage_12_metal_metal346_58e8b722.jpg,metal,paper,0.668311,0.31368
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_890_62eadad9.jpg,plastic,paper,0.662597,0.048203
+data/processed/dataset/val/organic/realwaste_Food Organics_Food Organics_94_6af16423.jpg,organic,plastic,0.656001,0.337127
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_252_4e369322.jpg,trash,metal,0.650861,0.002699
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_103_6d50dfee.jpg,cardboard,plastic,0.644152,0.348281
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_619_68fba3a5.jpg,plastic,metal,0.64063,0.337296
+data/processed/dataset/val/paper/realwaste_Paper_Paper_109_5d703eb4.jpg,paper,metal,0.626348,0.066926
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic768_7a0c9c38.jpg,plastic,metal,0.626217,0.372733
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic392_23389c30.jpg,plastic,glass,0.624777,0.29984
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_218_54ce674e.jpg,trash,plastic,0.620934,0.205838
+data/processed/dataset/val/glass/realwaste_Glass_Glass_44_a15daf21.jpg,glass,plastic,0.620559,0.018173
+data/processed/dataset/val/metal/realwaste_Metal_Metal_614_94382e72.jpg,metal,trash,0.61879,0.380335
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_91_3bcd43c5.jpg,plastic,paper,0.613513,0.215651
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_122_df4c1452.jpg,plastic,trash,0.613258,0.075125
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_179_dc2c4fb6.jpg,plastic,metal,0.61265,0.259181
+data/processed/dataset/val/paper/realwaste_Paper_Paper_322_a4904fa2.jpg,paper,cardboard,0.606675,0.392514
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic536_2d1cefd6.jpg,plastic,cardboard,0.604126,0.314507
+data/processed/dataset/val/battery/garbage_12_battery_battery853_df1c0bb1.jpg,battery,textile,0.593243,0.057458
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_431_999e13cf.jpg,cardboard,paper,0.593197,0.197282
+data/processed/dataset/val/plastic/garbage_12_plastic_plastic345_da65284d.jpg,plastic,paper,0.587086,0.000352
+data/processed/dataset/val/textile/garbage_12_shoes_shoes601_ac545136.jpg,textile,organic,0.571242,0.360224
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_938_96a7721a.jpg,cardboard,paper,0.568211,0.30464
+data/processed/dataset/val/metal/garbage_12_metal_metal111_3fb3c885.jpg,metal,glass,0.564987,0.404473
+data/processed/dataset/val/metal/gd_10_metal_metal_367_303ca4b0.jpg,metal,trash,0.560468,0.012083
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_253_d215f265.jpg,trash,metal,0.559329,0.248086
+data/processed/dataset/val/glass/realwaste_Glass_Glass_405_1e121794.jpg,glass,metal,0.554841,0.406861
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_290_9f9057de.jpg,textile,paper,0.549646,0.447185
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_442_dc998277.jpg,trash,organic,0.544391,0.455119
+data/processed/dataset/val/trash/realwaste_Miscellaneous Trash_Miscellaneous Trash_137_cacd2a35.jpg,trash,textile,0.543554,0.150291
+data/processed/dataset/val/metal/realwaste_Metal_Metal_617_584ae825.jpg,metal,trash,0.541594,0.458346
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_425_db329d9d.jpg,cardboard,textile,0.541098,0.163876
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_187_12e8cedd.jpg,cardboard,plastic,0.536938,0.293919
+data/processed/dataset/val/cardboard/gd_10_cardboard_cardboard_353_66218c05.jpg,cardboard,plastic,0.536811,0.460859
+data/processed/dataset/val/battery/garbage_12_battery_battery236_b856c4c5.jpg,battery,metal,0.535359,0.464586
+data/processed/dataset/val/trash/garbage_12_trash_trash438_48c05c64.jpg,trash,textile,0.528168,0.019194
+data/processed/dataset/val/cardboard/realwaste_Cardboard_Cardboard_134_4182b19f.jpg,cardboard,plastic,0.521203,0.039483
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_299_391b8bd3.jpg,textile,metal,0.518997,0.48011
+data/processed/dataset/val/glass/realwaste_Glass_Glass_186_8982bb07.jpg,glass,metal,0.517582,0.479054
+data/processed/dataset/val/glass/gd_10_glass_glass_573_4e333f4d.jpg,glass,metal,0.513382,0.486561
+data/processed/dataset/val/textile/gd_10_shoes_shoes_925_1b3ec878.jpg,textile,paper,0.510296,0.476498
+data/processed/dataset/val/organic/garbage_12_biological_biological234_371d2cc5.jpg,organic,metal,0.508477,0.265951
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_109_6e944f3c.jpg,plastic,trash,0.5056,0.276533
+data/processed/dataset/val/metal/gd_10_metal_metal_76_1eee6810.jpg,metal,glass,0.493558,0.441027
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_168_f55e50ae.jpg,textile,trash,0.49041,0.445092
+data/processed/dataset/val/glass/realwaste_Glass_Glass_97_3ec323c9.jpg,glass,metal,0.486019,0.402248
+data/processed/dataset/val/trash/garbage_12_trash_trash497_dae9f6b1.jpg,trash,battery,0.484749,0.10386
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_83_5a1b77d2.jpg,plastic,paper,0.483288,0.376902
+data/processed/dataset/val/plastic/gd_10_plastic_plastic_200_45be6db4.jpg,plastic,battery,0.474899,0.097489
+data/processed/dataset/val/glass/garbage_12_green-glass_green-glass101_f95c5b07.jpg,glass,cardboard,0.473409,0.090745
+data/processed/dataset/val/plastic/realwaste_Plastic_Plastic_292_a025aa06.jpg,plastic,paper,0.470641,0.186977
+data/processed/dataset/val/metal/realwaste_Metal_Metal_424_ca00458e.jpg,metal,textile,0.467466,0.371565
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_226_9c90be1b.jpg,textile,paper,0.450056,0.196221
+data/processed/dataset/val/glass/gd_10_glass_glass_659_e3d85ff4.jpg,glass,metal,0.447749,0.000185
+data/processed/dataset/val/glass/realwaste_Glass_Glass_25_e9911f2b.jpg,glass,plastic,0.429489,0.117617
+data/processed/dataset/val/textile/garbage_12_clothes_clothes2170_798ea0b2.jpg,textile,organic,0.426317,0.374596
+data/processed/dataset/val/trash/garbage_12_trash_trash2_a9542b62.jpg,trash,plastic,0.415514,0.302781
+data/processed/dataset/val/textile/realwaste_Textile Trash_Textile Trash_125_a9eb264c.jpg,textile,metal,0.382574,0.358605
+data/processed/dataset/val/battery/garbage_12_battery_battery179_6f682a8d.jpg,battery,metal,0.247619,0.216919

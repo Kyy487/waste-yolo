@@ -1,0 +1,2 @@
+run_id,model,imgsz,epochs,batch,aug,imbalance,val_acc,val_macro_f1,train_time_min,notes
+E1_yolov8n-cls_224_baseline,yolov8n-cls,224,50,32,default,none,0.959104,0.947495,55.42,baseline with default augmentation
